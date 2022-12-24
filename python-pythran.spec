@@ -45,6 +45,7 @@ of multi-cores and SIMD instruction units.
 %{?with_doc: %doc docs/_build/html}
 %{_bindir}/pythran
 %{_bindir}/pythran-config
+%{py_sitedir}/omp
 %{py_sitedir}/pythran
 %{py_sitedir}/pythran-*.*-info
 
