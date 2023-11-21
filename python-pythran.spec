@@ -3,7 +3,7 @@
 Summary:	Ahead of Time compiler for numeric kernels
 Name:		python-pythran
 Version:	0.13.1
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	BSD and (MIT or NCSA)
 URL:		https://github.com/serge-sans-paille/pythran
