@@ -2,8 +2,8 @@
 
 Summary:	Ahead of Time compiler for numeric kernels
 Name:		python-pythran
-Version:	0.14.0
-Release:	2
+Version:	0.16.1
+Release:	1
 Group:		Development/Python
 License:	BSD and (MIT or NCSA)
 URL:		https://github.com/serge-sans-paille/pythran
@@ -54,17 +54,6 @@ of multi-cores and SIMD instruction units.
 %prep
 %autosetup -n pythran-%{version}
 
-# use system libs
-rm -r third_party/boost #third_party/xsimd
-cat >> setup.cfg << EOF
-[build_py]
-no_boost=True
-#no_xsimd=True
-EOF
-
-# fix doc
-sed -i -e '/guzzle_sphinx_theme/d' docs/conf.py docs/requirements.txt
-
 %build
 %py_build
 
@@ -75,4 +64,3 @@ rm -rf docs/_build/html/.{doctrees,buildinfo}
  
 %install
 %py_install
-
