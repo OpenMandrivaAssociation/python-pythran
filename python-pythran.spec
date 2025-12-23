@@ -11,6 +11,9 @@ Group:		Development/Python
 License:	BSD and (MIT or NCSA)
 URL:		https://github.com/serge-sans-paille/pythran
 Source0:	https://github.com/serge-sans-paille/pythran/archive/%{version}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+# Update gast and beniget requirements
+Patch:		https://github.com/serge-sans-paille/pythran/commit/3690121152403dc4fb4fe50bb5837007f7a4de68.patch#/update-gast-and-beniget-requirements.patch
+
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(blas)
 BuildRequires:	pkgconfig(python)
