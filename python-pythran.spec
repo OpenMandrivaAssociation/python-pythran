@@ -5,19 +5,21 @@
 
 Summary:	Ahead of Time compiler for numeric kernels
 Name:		python-pythran
-Version:	0.18.1
-Release:	2
+Version:	0.19.0
+Release:	1
 Group:		Development/Python
 License:	BSD and (MIT or NCSA)
 URL:		https://github.com/serge-sans-paille/pythran
 Source0:	https://github.com/serge-sans-paille/pythran/archive/%{version}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
-# Update gast and beniget requirements
-Patch:		https://github.com/serge-sans-paille/pythran/commit/3690121152403dc4fb4fe50bb5837007f7a4de68.patch#/update-gast-and-beniget-requirements.patch
 
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(blas)
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	python%{pyver}dist(beniget)
+BuildRequires:	python%{pyver}dist(gast)
+BuildRequires:	python%{pyver}dist(numpy)
 BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(ply)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(wheel)
 #BuildRequires:	xsimd-devel
@@ -31,7 +33,7 @@ BuildRequires:	python%{pyver}dist(scipy)
 
 Requires:	boost-devel
 Requires:	pkgconfig(blas)
-Requires:	pkgconfig(python)
+Requires:	pkgconfig(python3)
 #Requires:	xsimd-devel
 
 BuildArch:	noarch
